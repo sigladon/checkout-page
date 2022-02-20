@@ -1,0 +1,39 @@
+:root {
+/*-- Font Size --*/
+    --title: 3.6rem;
+    --product-name: 1.6rem;
+    --product-discount: 1.6rem;
+    --product-price: 1.2rem;
+    --product-amount: 1.6rem;
+    --info-class:1.8rem;
+    --info-amount:1.4rem;
+    --section-title: 1.8rem;
+    --form-label: 1.2rem;
+    --form-input: 1.6rem;
+    --form-save: 1.2rem;
+    --form-button: 1.6rem;
+    --footer: 1.4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 48em;
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+}
+
+.checkout {
+    position: absolute;
+    top: 20%;
+    right: 2%;
+}
+
+
+.information-form {
+    max-width: 700px;
+}
+
+

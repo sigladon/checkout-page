@@ -7,320 +7,338 @@
 :root {
 /*-- Font Size --*/
     --title: 2.4rem;
-    --description: 1.2rem;
-    --detail-title: 0.8rem;
-    --detail-account: 1rem;
-    --ingredients-title: 1.8rem;
-    --ingredients-subtitle-1: 1.6rem;
-    --ingredients-subtitle-2: 1.8rem;
-    --ingredients-list: 1.4rem;
-    --instructions-title: 2.4rem;
-    --instructions-number: 2.4rem;
-    --instructions-list: 1.6rem;
-    --source: 1.2rem;
+    --product-name: 1.2rem;
+    --product-discount: 1.4rem;
+    --product-price: 1rem;
+    --product-amount: 1.6rem;
+    --info-class:1.4rem;
+    --info-amount:1.5rem;
+    --section-title: 1.4rem;
+    --form-label: 1rem; --form-input: 1.2rem;
+    --form-save: 1rem;
+    --form-button: 1.6rem;
     --footer: 1.4rem;
 /*-- Family Fonts --*/
-    --playfair: 'Playfair Display', serif;
     --montserrat: 'Montserrat', sans-serif; 
-    --lobster: 'Lobster', cursive;
 /*-- Colors --*/ 
-    --color-bg: #fafafa;
-    --color-fg: #000000;
-    --color-one: #f2994a;
-    --color-two: #333333;
-    --color-three: #4f4f4f;
-    --color-four: #bdbdbd;
+    --color-one: #4e5150;
+    --color-two: #f2994a;
+    --color-three: #333333;
+    --color-four: #e0e0e0;
     --color-five: #828282;
-    --color-six: #ffffff;
+    --color-six: #f2f2f2;
+    --color-seven: #bdbdbd;
+    --color-eight: #4f4f4f;
+
 }
 
 html {
+    font-family: var(--montserrat);
     font-size: 62.5%;
 }
 
 .page {
-    background-color: var(--color-bg);
     width: 100vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.introduction {
-    margin: 1em;
+.content {
+    font-weight: 600;
 }
 
 .title {
+    margin: 1em 0.5em;
     font-size: var(--title);
-    font-family: var(--playfair);
-    font-weight: 700;
-    margin: 0.85em 0 0.4em;
+    color: var(--color-one);
+    font-weight: 600;
 }
 
-.description {
-    position: relative;
-    width: 100%;
-}
-
-.description__dots {
-    position: absolute;
-    top: 6%;
-    left: 2%;
-    transform: translate(-2.5%, -6%);
-}
-
-.description__text {
-    color: var(--color-three);
-    font-size: var(--description);
-    font-family: var(--montserrat);
-    font-style: italic;
-    font-weight: 500;
-    margin: 0 0.4em 1em 2.5em;
-}
-
-.photo {
-    margin: 1em;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
+.checkout {
+    background-color: var(--color-six);
     border-radius: 12px;
-}
-
-.directions {
     margin: 1em;
 }
 
-.details {
+.list {
+
+}
+
+.item {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-}
-
-.details .element:nth-child(2) {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
-.details .element:nth-child(3) {
-    grid-area: 2 / 2 / 3 / 3;
-}
-
-.details .element:nth-child(4) {
-    grid-area: 2 / 3 / 3 / 4;
-}
-
-
-.element {
-    margin: 0.8em;
-    display: flex;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
 }
 
-.element__icon {
-    font-size: var(--description);
-    width: 14px;
+.item__photo {
+    padding: 3em;
+    width: 20em;
+    height: 20em;
 }
 
-.element__text {
-    padding-left: 8px;
-    font-family: var(--montserrat);
+.item__photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.element__text-title {
-    font-size: var(--detail-title);
-    font-weight: 700;
-    color: var(--color-four);
+.item__details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
-.elemente__text-amount {
-    font-size: var(--detail-account);
-    font-weight: 500;
+.product {
+    margin: 3.5em 0 auto;
+}
+
+.product__name {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: var(--product-name);
+    color: var(--color-one);
+    margin-bottom: 0.8em;
+}
+
+.product__discount {
+    font-size: var(--product-discount);
     color: var(--color-two);
 }
 
-
-.emph {
+.product__price {
+    font-size: var(--product-price);
     color: var(--color-one);
+    text-decoration: line-through;
+    padding-left: 0.5em;
+}
+
+.amount-button {
+    position: relative;
+    height: 4.5em;
+    margin: auto 0 3em;
+    border: 1px solid var(--color-five);
+    border-radius: 12px;
+    padding: 1em;
+    width: 10em;
+}
+
+/*
+.amount-button button:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+*/
+
+.amount-button button:active {
+    box-shadow: rgba(201, 198, 197, 0.50) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.amount-button__reduce, .amount-button__increase {
+    position: absolute;
+    background-color: var(--color-four);
+    border-radius: 4px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.amount-button__reduce svg, .amount-button__increase svg {
+    width: 1em;
+}
+
+.amount-button__number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--product-amount);
+    color: var(--color-three);
+    font-weight: 600;
+}
+
+.amount-button__reduce {
+    left: 1em;
+}
+
+.amount-button__increase {
+    right: 1em;
+}
+
+.info {
+    margin: 1em 2em 1em;
+    padding: 1em;
+    border-top: 1px solid var(--color-seven);
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout div:nth-child(3) {
+    padding-bottom: 2em;
+}
+
+
+.info__class {
+    font-size: var(--info-class);
+    color: var(--color-three);
+}
+
+.info__amount {
+    font-size: var(--info-amount);
+    color: var(--color-three);
+}
+
+.information-form {
+    position: relative;
+    margin: 1em 1em 10em;
+}
+
+.form-group {
+    margin: 2em 0.5em;
 }
 
 .section-title {
-    color: var(--color-two);
-    font-family: var(--playfair);
-    font-weight: 700;
+    font-size: var(--section-title);
+    color: var(--color-three);
 }
 
-.ingredients {
-    margin: 3em 0 1em;
-}
-
-.ingredients .section-title {
-    font-size: var(--ingredients-title);
-}
-
-.subsection-title {
-    color: var(--color-two);
-    font-family: var(--playfair);
-    font-weight: 400;
-    font-style: italic;
+.form-section {
     margin: 1em 0;
 }
 
-.subtitle-1 {
-    font-size: var(--ingredients-subtitle-1);
+.form-label {
+    font-size: var(--form-label);
+    color: var(--color-eight);
+    line-height: 20px;
 }
 
-.subtitle-2 {
-    margin-top: 2em;
-    font-size: var(--ingredients-subtitle-2);
-}
-
-.ingredients-list {
-    color: var(--color-two);
-    font-size: var(--ingredients-list);
-    font-family: var(--montserrat);
-    font-weight: 400;
-    line-height: 25px;
-}
-
-.ingredients-list__item b {
-    font-weight: 700;
-}
-
-.ingredients-list__item .text-emph {
-    font-weight: 500;
-    font-style: italic;
-}
-
-.ingredients-list__item {
-    display: block;
+.form-control {
     position: relative;
-    padding-left: 35px;
-    padding-right: 0.4em;
-    margin-bottom: 12px;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.ingredients-list__item input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: var(--color-bg);
+    width: 100%;
+    height: 4em;
     border: 1px solid var(--color-five);
-    border-radius: 4px;
+    border-radius: 12px;
 }
 
-.ingredients-list__item input:checked ~ .checkmark {
-    background-color: var(--color-one);
-}
-
-.checkmark:after {
-    content: "";
+.form-control__icon {
+    color: var(--color-five);
     position: absolute;
-    display: none;
+    width: 1.4em;
+    height: 1.4em;
+    top: 50%;
+    left: 1em;
+    transform: translateY(-50%);
 }
 
-.ingredients-list__item input:checked ~ .checkmark:after {
-    display: block;
+.form-control__icon svg {
+    width: 100%;
+    height: 100%;
 }
 
-.ingredients-list__item .checkmark:after {
-    left: 7.5px;
-    top: 3px;
-    width: 5px;
-    height: 10px;
-    border: solid var(--color-bg);
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-
-.instructions {
-    margin: 1em;
-}
-
-.instructions .section-title {
-    font-size: var(--instructions-title);
-    margin: 1em 0;
-}
-
-.recipe-instructions {
-    list-style-type: none;
-    counter-reset: section;
-}
-
-.recipe-instructions__item {
-    font-size: var(--instructions-list);
-    font-family: var(--montserrat);
-    font-weight: 400;
-    display: block;
-    position: relative;
-    padding-left: 60px;
-    padding-right: 0.9em;
-    margin-bottom: 1.4em;
-    line-height: 24px;
-}
-
-.recipe-instructions__item b{
-    font-weight: 700;
-}
-
-.step-number {
+.form-control__input {
+    font-size: var(--form-input);
     position: absolute;
-    top: 0;
-    left: 4px;
-    width: 36px;
-    height: 36px;
-    background-color: var(--color-one);
-    border-radius: 8px;
-    text-align: center;
-    font-family: var(--lobster);
-    font-size: var(--instructions-number);
-    font-weight: 400;
-    line-height: 34px;
-    color: var(--color-six);
+    top: 50%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 2em;
+    border: none;
+    color: var(--color-three);
 }
 
-.source {
-    color: var(--color-four);
-    font-size: var(--source);
-    font-family: var(--montserrat);
-    font-weight: 400;
-    font-style: italic;
-    margin: 1em;
-    margin-bottom: 100px;
+.form-control__input:focus {
+    outline: none;
 }
 
-.source a {
-    text-decoration: none;
-    color: var(--color-four);
+.double-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.double-column .form-section:nth-child(1) {
+    margin-right: 1em;
+}
+
+.double-column .form-section:nth-child(2) {
+    margin-left: 1.4em;
+}
+
+.double-column .form-control__input {
+    left: 58%;
+    width: 72%;
+}
+
+.form-control__select {
+    background-color: transparent;
+}
+
+.form-control__input::placeholder{
+    color: var(--color-five)
+}
+
+.save-info {
+    display: flex;
+    align-items: center;
+    font-size: var(--form-save);
+    color: var(--color-eight);
+    width: 100%;
+}
+
+.save-info input {
+    width: 2em;
+}
+
+.save-info label {
+    margin-left: 0.5em;
+}
+
+.continue-btn {
+    position: absolute;
+    bottom: -14.4%;
+    right: 5%;
+    width: 10em;
+    height: 3.8em;
+    cursor: pointer;
+    color: white;
+    background-color: var(--color-two);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    font-size: var(--form-button);
+}
+
+.continue-btn:hover {
+    box-shadow: rgba(249, 103, 44, 0.35) 0px -50px 36px -28px inset;
+}
+/*
+.amount-button button:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+*/
+
+.continue-btn:active {
+    box-shadow: rgba(234, 98, 7, 0.50) 0px 30px 60px -12px inset, rgba(239, 178, 107, 0.3) 0px 18px 36px -18px inset;
 }
 
 .footer {
-    color: var(--color-five);
-    font-family: var(--montserrat);
-    font-weight: 500;
-    font-size: var(--footer);
-    margin: 1em;
-    padding-bottom: 8px;
     text-align: center;
+    padding: 2em;
+}
+
+.footer, .footer a {
+    color: var(--color-seven);
+    font-size: var(--footer);
+    font-weight: 600;
+    text-decoration: none;
 }
 
 .footer a {
-    color: var(--color-five);
-    text-decoration: none;
     font-weight: 700;
 }
