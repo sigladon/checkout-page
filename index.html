@@ -81,7 +81,7 @@
                     <p class="info__amount">$333.92</p>
                 </div>
             </div>
-            <form class="information-form">
+            <form class="information-form" onsubmit="myFunction()">
                 <div class="form-group">
                     <h2 class="section-title">Contact information</h2>
                     <div class="form-section">
@@ -209,11 +209,17 @@
                 <input type="checkbox" id="saveInfo" name="saveInfo" value="yes">
                 <label for="saveInfo">Save this information for next time</label>
                 </div>
-                <input class="continue-btn" type="submit" name="continue" value="Continue"onclick="alert('Successful Validation!')  ">
+                <input class="continue-btn" type="submit" name="continue" value="Continue">
+                
             </form>
         </main>
         <footer class="footer">
             <p class="credits">created by <a href="https://github.com/sigladon/checkout-page" target="_blank">sigladon</a> - devChallenges.io</p>
         </footer>
+        <script>
+            function myFunction() {
+                alert("Successful Validation!");
+            } 
+        </script>
     </body>
 </html>
