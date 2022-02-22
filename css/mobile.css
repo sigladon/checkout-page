@@ -42,10 +42,10 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .content {
-    overflow-x: hidden;
     font-weight: 600;
 }
 
