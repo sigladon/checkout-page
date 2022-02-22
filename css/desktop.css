@@ -18,10 +18,9 @@
 .content {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding-right: 48em;
     max-width: 1440px;
-    margin: auto;
+    margin: auto auto 10em;
     position: relative;
 }
 
@@ -33,7 +32,14 @@
 
 
 .information-form {
-    max-width: 700px;
+    margin: 0 auto;
+    width: 46em;
 }
 
+.title {
+    margin: 1em 0;
+}
 
+.footer {
+    margin-top: auto;
+}
