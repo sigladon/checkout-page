@@ -45,6 +45,7 @@ html {
 }
 
 .content {
+    overflow-x: hidden;
     font-weight: 600;
 }
 
