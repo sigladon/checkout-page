@@ -233,7 +233,7 @@ html {
     width: 1.4em;
     height: 1.4em;
     top: 50%;
-    left: 1em;
+    left: 1.4em;
     transform: translateY(-50%);
 }
 
@@ -246,9 +246,9 @@ html {
     font-size: var(--form-input);
     position: absolute;
     top: 50%;
-    left: 54%;
+    left: 14.8em;
     transform: translate(-50%, -50%);
-    width: 85%;
+    width: 24em;
     height: 2em;
     border: none;
     color: var(--color-three);
@@ -273,7 +273,7 @@ html {
 
 .double-column .form-control__input {
     left: 58%;
-    width: 72%;
+    width: 80%;
 }
 
 .form-control__select {
